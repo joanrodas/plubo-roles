@@ -1,0 +1,23 @@
+{
+    "name": "joanrodas/plubo-roles",
+    "description": "WordPress roles, simplified.",
+    "keywords": ["plugin", "wordpress", "roles", "wp", "capabilities"],
+    "homepage": "https://github.com/joanrodas/plubo-roles",
+    "license": "GPL-3.0+",
+    "authors": [
+      {
+        "name": "Joan Rodas Cusidó",
+        "email": "joan@sirvelia.com",
+        "homepage": "https://sirvelia.com",
+        "role": "Developer"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "PluboRoles\\": "PluboRoles/"
+      }
+    },
+    "require": {
+      "php": ">=7.4"
+    }
+}
