@@ -12,7 +12,7 @@
  * Author URI:        https://sirvelia.com/
  * License:           GPL-3.0+
  * License URI:       http://www.gnu.org/licenses/gpl-3.0.txt
- * Text Domain:       plubo-routes
+ * Text Domain:       plubo-roles
  * Domain Path:       /languages
  */
 
