@@ -16,12 +16,13 @@
  * Domain Path:       /languages
  */
 
-require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
+define( 'PBR_PATH', plugin_dir_path( __FILE__ ) );
+require_once PBR_PATH . 'vendor/autoload.php';
 
 PluboRoles\RolesProcessor::init();
 
 add_filter('plubo/roles', function ($roles) {
-    $roles[] = (new PluboRoles\Role('test', 'Rol test'))->extend('subscriber');
-    $roles[] = (new PluboRoles\Role('subscriber'))->rename('Patata');
+    $roles[] = pb_role('test', 'Rol test')->extend('subscriber');
+    $roles[] = pb_role('subscriber')->rename('Patata');
     return $roles;
 });

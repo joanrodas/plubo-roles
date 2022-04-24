@@ -33,6 +33,7 @@ class RolesProcessor
     public static function init()
     {
         $self = new self();
+        include_once PBR_PATH . 'PluboRoles/functions.php';
         add_action('init', [$self, 'addRoles']);
         add_action('init', [$self, 'renameRoles']);
         add_action('admin_init', [$self, 'renameRoles']);

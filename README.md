@@ -18,19 +18,16 @@ WordPress roles simplified.
 
 <br/>
 
-## Adding new roles
+## Basic usage
 
 ```php
 <?php
-use PluboRoles\RolesProcessor;
-use PluboRoles\Role;
-
-RolesProcessor::init();
+PluboRoles\RolesProcessor::init();
 
 add_filter('plubo/roles', function($roles) {
-  $roles[] = (new Role('student', __('Student', 'plubo')))->extend('subscriber')->addCaps(['view_lesson', 'view_task']);
-  $roles[] = (new Role('instructor'))->extend('contributor')->restrictAdmin();
-  $roles[] = (new Role('subscriber'))->rename('Member');
+  $roles[] = pb_role('student', 'Student')->extend('subscriber')->addCaps(['view_lesson', 'view_task']);
+  $roles[] = pb_role('instructor')->extend('contributor')->restrictAdmin();
+  $roles[] = pb_role('subscriber')->rename('Member');
   return $roles;
 }); ?>
 ```
